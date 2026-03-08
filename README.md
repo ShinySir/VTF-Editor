@@ -11,3 +11,5 @@ services:
       - placefolderpathhere/VTF-Editor:/repo
     restart: unless-stopped
 ```
+
+https://shinysir.github.io/VTF-Editor/
