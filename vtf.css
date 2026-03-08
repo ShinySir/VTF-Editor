@@ -1,7 +1,80 @@
-body {
-	background-color: #b3b3b3;
-	text-align: center;
+@import url("https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css");
+@import url('https://cdn.jsdelivr.net/npm/@catppuccin/palette/css/catppuccin.css');
+
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap");
+
+/* Override Water.css with Catppuccin Mocha */
+:root {
+	--background-body: var(--ctp-mocha-base);
+	--background: var(--ctp-mocha-mantle);
+	--background-alt: var(--ctp-mocha-crust);
+
+	--text-main: var(--ctp-mocha-text);
+	--text-bright: var(--ctp-mocha-rosewater);
+	--text-muted: var(--ctp-mocha-subtext0);
+
+	--links: var(--ctp-mocha-blue);
+	--focus: var(--ctp-mocha-lavender);
+	--border: var(--ctp-mocha-surface2);
+
+	font-family: "Lexend", system-ui, sans-serif;
 }
+
+
+
+body {
+	background-color: var(--ctp-mocha-base);
+	font-family: "Lexend", system-ui, sans-serif;
+	
+}
+
+body, button, input, select, textarea {
+    font-family: "Lexend", system-ui, sans-serif;
+}
+
+
+
+
+
+
+input,
+select,
+textarea,
+button {
+  background-color: var(--ctp-mocha-mantle); 
+  color: var(--ctp-mocha-text); 
+}
+
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  background-color: var(--ctp-mocha-mantle); 
+  border-color: var(--ctp-mocha-blue); 
+  color: var(--ctp-mocha-rosewater);
+}
+
+
+::placeholder {
+  color: var(--ctp-mocha-subtext0);
+  opacity: 1;
+}
+
+select {
+    display: inline-block;  /* stays on the same line */
+}
+
+p {
+	color: var(--ctp-mocha-subtext1);
+    font-size: 13px;
+}
+
+
+
+
+
 .createsetting {
 	display: inline-block;
 }
@@ -13,7 +86,7 @@ body {
 	text-align: left;
 }
 #resolutionNotice {
-	color: #888888;
+	color: var(--ctp-mocha-subtext0);
 	display: block;
 	visibility: visible;
 }
@@ -48,22 +121,24 @@ body {
 #mipmaps {
 	margin-left: auto;
 	margin-right: auto;
+	
+	text-align: center;
 }
 #mipmaps canvas {
 	background: url("img/bg.gif");
 	background-position: 0 0;
 	border-bottom: 1px;
 	border-bottom-style: solid;
-	border-bottom-color: #c4c4c4;
+	border-bottom-color: var(--ctp-mocha-surface2);
 	border-right: 1px;
 	border-right-style: solid;
-	border-right-color: #c4c4c4;
+	border-right-color: var(--ctp-mocha-surface2);
 	border-left: 1px;
 	border-left-style: solid;
-	border-left-color: #a4a4a4;
+	border-left-color: var(--ctp-mocha-surface2);
 	border-top: 1px;
 	border-top-style: solid;
-	border-top-color: #a4a4a4;
+	border-top-color: var(--ctp-mocha-surface2);
 }
 .mipmapElement {
 	margin-top: 20px;
@@ -84,7 +159,7 @@ body {
 	visibility: hidden;
 }
 #outputFilename:invalid {
-	background-color: pink;
+	background-color: var(--ctp-mocha-red);
 }
 #videoImporter{
 }
